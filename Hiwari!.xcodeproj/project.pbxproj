@@ -15,6 +15,11 @@
 		27471EF9265A035000CE3E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27471EF7265A035000CE3E47 /* LaunchScreen.storyboard */; };
 		27471F04265A035100CE3E47 /* Hiwari_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471F03265A035100CE3E47 /* Hiwari_Tests.swift */; };
 		27471F0F265A035100CE3E47 /* Hiwari_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471F0E265A035100CE3E47 /* Hiwari_UITests.swift */; };
+		2763CC3F265D1C8100248C18 /* TodolistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */; };
+		2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC4F265E763500248C18 /* PickerKeyboard.swift */; };
+		278ACB94265A7EA700663172 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB93265A7EA700663172 /* green.png */; };
+		278ACB99265B35C800663172 /* #41B593.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB98265B35C800663172 /* #41B593.png */; };
+		278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ACBA5265BE62100663172 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		27471F0A265A035100CE3E47 /* Hiwari!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hiwari!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27471F0E265A035100CE3E47 /* Hiwari_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hiwari_UITests.swift; sourceTree = "<group>"; };
 		27471F10265A035100CE3E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistTableViewController.swift; sourceTree = "<group>"; };
+		2763CC4F265E763500248C18 /* PickerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard.swift; sourceTree = "<group>"; };
+		278ACB93265A7EA700663172 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		278ACB98265B35C800663172 /* #41B593.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#41B593.png"; sourceTree = "<group>"; };
+		278ACBA5265BE62100663172 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,14 @@
 		27471EEB265A034E00CE3E47 /* Hiwari! */ = {
 			isa = PBXGroup;
 			children = (
+				278ACB98265B35C800663172 /* #41B593.png */,
+				278ACB93265A7EA700663172 /* green.png */,
 				27471EEC265A034E00CE3E47 /* AppDelegate.swift */,
 				27471EEE265A034E00CE3E47 /* SceneDelegate.swift */,
 				27471EF0265A034E00CE3E47 /* ViewController.swift */,
+				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
+				278ACBA5265BE62100663172 /* CalculateViewController.swift */,
+				2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */,
 				27471EF2265A034E00CE3E47 /* Main.storyboard */,
 				27471EF5265A035000CE3E47 /* Assets.xcassets */,
 				27471EF7265A035000CE3E47 /* LaunchScreen.storyboard */,
@@ -231,7 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278ACB99265B35C800663172 /* #41B593.png in Resources */,
 				27471EF9265A035000CE3E47 /* LaunchScreen.storyboard in Resources */,
+				278ACB94265A7EA700663172 /* green.png in Resources */,
 				27471EF6265A035000CE3E47 /* Assets.xcassets in Resources */,
 				27471EF4265A034E00CE3E47 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				27471EF1265A034E00CE3E47 /* ViewController.swift in Sources */,
+				278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */,
 				27471EED265A034E00CE3E47 /* AppDelegate.swift in Sources */,
 				27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */,
+				2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */,
+				2763CC3F265D1C8100248C18 /* TodolistTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
