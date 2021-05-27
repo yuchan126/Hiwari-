@@ -103,6 +103,7 @@ extension PickerKeyboard: UIPickerViewDelegate, UIPickerViewDataSource {
         // delegateなどでViewControllerに選択された情報を渡す
         date1Label.text = array[row]
         date2Label.text = array[row]
+        
     }
     
 }

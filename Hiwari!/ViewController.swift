@@ -38,9 +38,12 @@ class ViewController: UIViewController {
   
     @IBOutlet var date1pickerKeyboard : PickerKeyboard!
     @IBOutlet var date2pickerKeyboard : PickerKeyboard!
+    
     @IBOutlet var month1pickerKeyboard : PickerKeyboard2!
     @IBOutlet var month2pickerKeyboard : PickerKeyboard2!
+    
     @IBOutlet var pagepickerKeyoboard : PickerKeyboard3!
+    
     @IBOutlet var notificationpickerKeyboard : PickerKeyboard4!
     
     @IBAction func HiwariButton (_sender: Any){

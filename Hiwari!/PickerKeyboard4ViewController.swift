@@ -100,5 +100,6 @@ extension PickerKeyboard4: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // delegateなどでViewControllerに選択された情報を渡す
         notificationLabel?.text = array[row]
+        
     }
 }

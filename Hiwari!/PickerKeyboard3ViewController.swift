@@ -100,5 +100,6 @@ extension PickerKeyboard3: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // delegateなどでViewControllerに選択された情報を渡す
         pageLabel?.text = array[row]
+        
     }
 }
