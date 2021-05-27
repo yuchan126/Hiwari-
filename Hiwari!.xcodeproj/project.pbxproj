@@ -17,6 +17,9 @@
 		27471F0F265A035100CE3E47 /* Hiwari_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471F0E265A035100CE3E47 /* Hiwari_UITests.swift */; };
 		2763CC3F265D1C8100248C18 /* TodolistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */; };
 		2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC4F265E763500248C18 /* PickerKeyboard.swift */; };
+		2763CC61265F1E0700248C18 /* PickerKeyboard2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC60265F1E0600248C18 /* PickerKeyboard2ViewController.swift */; };
+		2763CC66265F1EE300248C18 /* PickerKeyboard3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC65265F1EE300248C18 /* PickerKeyboard3ViewController.swift */; };
+		2763CC6B265F1F8400248C18 /* PickerKeyboard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */; };
 		278ACB94265A7EA700663172 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB93265A7EA700663172 /* green.png */; };
 		278ACB99265B35C800663172 /* #41B593.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB98265B35C800663172 /* #41B593.png */; };
 		278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ACBA5265BE62100663172 /* CalculateViewController.swift */; };
@@ -56,6 +59,9 @@
 		27471F10265A035100CE3E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistTableViewController.swift; sourceTree = "<group>"; };
 		2763CC4F265E763500248C18 /* PickerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard.swift; sourceTree = "<group>"; };
+		2763CC60265F1E0600248C18 /* PickerKeyboard2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard2ViewController.swift; sourceTree = "<group>"; };
+		2763CC65265F1EE300248C18 /* PickerKeyboard3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard3ViewController.swift; sourceTree = "<group>"; };
+		2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard4ViewController.swift; sourceTree = "<group>"; };
 		278ACB93265A7EA700663172 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		278ACB98265B35C800663172 /* #41B593.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#41B593.png"; sourceTree = "<group>"; };
 		278ACBA5265BE62100663172 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 				27471EEE265A034E00CE3E47 /* SceneDelegate.swift */,
 				27471EF0265A034E00CE3E47 /* ViewController.swift */,
 				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
+				2763CC60265F1E0600248C18 /* PickerKeyboard2ViewController.swift */,
+				2763CC65265F1EE300248C18 /* PickerKeyboard3ViewController.swift */,
+				2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */,
 				278ACBA5265BE62100663172 /* CalculateViewController.swift */,
 				2763CC3E265D1C8100248C18 /* TodolistTableViewController.swift */,
 				27471EF2265A034E00CE3E47 /* Main.storyboard */,
@@ -280,7 +289,10 @@
 				27471EED265A034E00CE3E47 /* AppDelegate.swift in Sources */,
 				27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */,
 				2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */,
+				2763CC61265F1E0700248C18 /* PickerKeyboard2ViewController.swift in Sources */,
 				2763CC3F265D1C8100248C18 /* TodolistTableViewController.swift in Sources */,
+				2763CC6B265F1F8400248C18 /* PickerKeyboard4ViewController.swift in Sources */,
+				2763CC66265F1EE300248C18 /* PickerKeyboard3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

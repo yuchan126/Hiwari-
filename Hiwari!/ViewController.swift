@@ -21,14 +21,27 @@ var pageNumber = [String]()
 
 class ViewController: UIViewController {
    
-    @IBOutlet var monthButton2 : UIButton!
-    @IBOutlet var dateButton2 : UIButton!
-    @IBOutlet var pageButton : UIButton!
-    @IBOutlet var notificationButton : UIButton!
+    @IBOutlet var monthView2 : UIView!
+    @IBOutlet var dateView2 : UIView!
+    @IBOutlet var pageView : UIView!
+    @IBOutlet var notificationView : UIView!
     @IBOutlet var HiwariButton : UIButton!
     @IBOutlet var TodoTextField : UITextField!
-    @IBOutlet var monthButton1 : UIButton!
-    @IBOutlet var date1Label: UILabel!
+    @IBOutlet var monthView1 : UIView!
+    @IBOutlet var dateView1 : UIView!
+    @IBOutlet var date1Label : UILabel!
+    @IBOutlet var date2Label : UILabel!
+    @IBOutlet var month1Label: UILabel!
+    @IBOutlet var month2Label: UILabel!
+    @IBOutlet var pageLabel : UILabel!
+    @IBOutlet var notificationLabel : UILabel!
+  
+    @IBOutlet var date1pickerKeyboard : PickerKeyboard!
+    @IBOutlet var date2pickerKeyboard : PickerKeyboard!
+    @IBOutlet var month1pickerKeyboard : PickerKeyboard2!
+    @IBOutlet var month2pickerKeyboard : PickerKeyboard2!
+    @IBOutlet var pagepickerKeyoboard : PickerKeyboard3!
+    @IBOutlet var notificationpickerKeyboard : PickerKeyboard4!
     
     @IBAction func HiwariButton (_sender: Any){
         taskName.append(TodoTextField.text!)
@@ -42,26 +55,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //pickerViewの設定
+        date1pickerKeyboard.label = date1Label
+        date2pickerKeyboard.label = date2Label
+        month1pickerKeyboard.label = month1Label
+        month2pickerKeyboard.label = month2Label
+        pagepickerKeyoboard.label = pageLabel
+        notificationpickerKeyboard.label = notificationLabel
+        
         
         
         //ボタンの枠をつける
-        monthButton1.layer.borderColor = UIColor.black.cgColor
-        monthButton2.layer.borderColor = UIColor.black.cgColor
-        dateButton2.layer.borderColor = UIColor.black.cgColor
-        pageButton.layer.borderColor = UIColor.black.cgColor
-        notificationButton.layer.borderColor = UIColor.black.cgColor
-        date1Label.layer.borderColor = UIColor.black.cgColor
+    
+        monthView2.layer.borderColor = UIColor.black.cgColor
+        dateView2.layer.borderColor = UIColor.black.cgColor
+        dateView1.layer.borderColor = UIColor.black.cgColor
+        pageView.layer.borderColor = UIColor.black.cgColor
+        notificationView.layer.borderColor = UIColor.black.cgColor
+        monthView1.layer.borderColor = UIColor.black.cgColor
+       
        
         
         //ボタンの枠線
         
-        self.dateButton2.layer.borderWidth = 0.3
-        self.monthButton1.layer.borderWidth = 0.3
-        self.monthButton2.layer.borderWidth = 0.3
-        self.pageButton.layer.borderWidth = 0.3
-        self.notificationButton.layer.borderWidth = 0.3
-        self.date1Label.layer.borderWidth = 0.3
+        self.dateView2.layer.borderWidth = 0.3
+        self.dateView1.layer.borderWidth = 0.3
+        self.monthView1.layer.borderWidth = 0.3
+        self.monthView2.layer.borderWidth = 0.3
+        self.pageView.layer.borderWidth = 0.3
+        self.notificationView.layer.borderWidth = 0.3
         HiwariButton.layer.cornerRadius = 20
+   
         
     }
 
