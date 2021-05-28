@@ -18,7 +18,7 @@ class PickerKeyboard3: UIControl {
      */
     var pageLabel :UILabel?
     
-    let array:[String] = ["ページ","章","問"]
+    let array:[String] = ["","ページ","章","問"]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -39,19 +39,19 @@ class PickerKeyboard3: UIControl {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
         view.frame = CGRect(x: 0, y: 0, width: frame.width, height: 44)
         
-        let closeButton = UIButton(type: .custom)
-        closeButton.setTitle("閉じる", for: .normal)
-        closeButton.sizeToFit()
-        closeButton.addTarget(self, action: #selector(tappedCloseButton(_:)), for: .touchUpInside)
-        closeButton.setTitleColor(UIColor(red: 0, green: 122/255, blue: 1, alpha: 1.0), for: .normal)
+        let finishButton = UIButton(type: .custom)
+        finishButton.setTitle("Done", for: .normal)
+        finishButton.sizeToFit()
+        finishButton.addTarget(self, action: #selector(tappedCloseButton(_:)), for: .touchUpInside)
+        finishButton.setTitleColor(UIColor(red: 0, green: 122/255, blue: 1, alpha: 1.0), for: .normal)
         
-        view.contentView.addSubview(closeButton)
+        view.contentView.addSubview(finishButton)
         
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.widthAnchor.constraint(equalToConstant: closeButton.frame.size.width).isActive = true
-        closeButton.heightAnchor.constraint(equalToConstant: closeButton.frame.size.height).isActive = true
-        closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
-        closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        finishButton.translatesAutoresizingMaskIntoConstraints = false
+        finishButton.widthAnchor.constraint(equalToConstant: finishButton.frame.size.width).isActive = true
+        finishButton.heightAnchor.constraint(equalToConstant: finishButton.frame.size.height).isActive = true
+        finishButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
+        finishButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
         return view
     }

@@ -38,12 +38,9 @@ class ViewController: UIViewController {
   
     @IBOutlet var date1pickerKeyboard : PickerKeyboard!
     @IBOutlet var date2pickerKeyboard : PickerKeyboard!
-    
     @IBOutlet var month1pickerKeyboard : PickerKeyboard2!
     @IBOutlet var month2pickerKeyboard : PickerKeyboard2!
-    
     @IBOutlet var pagepickerKeyoboard : PickerKeyboard3!
-    
     @IBOutlet var notificationpickerKeyboard : PickerKeyboard4!
     
     @IBAction func HiwariButton (_sender: Any){
@@ -58,12 +55,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //pickerViewの設定
-        date1pickerKeyboard.label = date1Label
-        date2pickerKeyboard.label = date2Label
-        month1pickerKeyboard.label = month1Label
-        month2pickerKeyboard.label = month2Label
-        pagepickerKeyoboard.label = pageLabel
-        notificationpickerKeyboard.label = notificationLabel
+        date1pickerKeyboard.date1Label = date1Label
+        date2pickerKeyboard.date2Label = date2Label
+        month1pickerKeyboard.month1Label = month1Label
+        month2pickerKeyboard.month2Label = month2Label
+        pagepickerKeyoboard.pageLabel = pageLabel
+        notificationpickerKeyboard.notificationLabel = notificationLabel
         
         
         
