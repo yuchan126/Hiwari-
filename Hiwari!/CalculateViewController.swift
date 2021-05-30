@@ -8,39 +8,44 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
-
+    
     @IBOutlet var taskLabel : UILabel!
-    @IBOutlet var startLabel : UILabel!
-    @IBOutlet var finishLabel : UILabel!
+    @IBOutlet var startmonthLabel : UILabel!
+    @IBOutlet var startdateLabel : UILabel!
+    @IBOutlet var finishmonthLabel : UILabel!
+    @IBOutlet var finishdateLabel : UILabel!
     @IBOutlet var TorikumuButton : UIButton!
-    @IBOutlet var pageLabel : UILabel!
+    @IBOutlet var dayTaskLabel : UILabel!
+    @IBOutlet var totalLabel : UILabel!
+    @IBOutlet var pageLabel: UILabel!
     
     
-    
-       
-    
+    var taskName: String?
+    var startmonthName: String?
+    var startdateName: String?
+    var finishmonthName: String?
+    var finishdateName: String?
+    var totalAmount: String?
+    var pageName: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
-        
-
+        taskLabel.text = taskName
+        startmonthLabel.text = startmonthName
+        startdateLabel.text = startdateName
+        finishmonthLabel.text = finishmonthName
+        finishdateLabel.text = finishdateName
+        totalLabel.text = totalAmount
+        pageLabel.text = pageName
         
         taskLabel.layer.borderColor = UIColor.black.cgColor
         self.taskLabel.layer.borderWidth = 0.3
-        
-        startLabel.layer.borderColor = UIColor.black.cgColor
-        self.startLabel.layer.borderWidth = 0.3
-        
-        finishLabel.layer.borderColor = UIColor.black.cgColor
-        self.finishLabel.layer.borderWidth = 0.3
-        
-       pageLabel.layer.borderColor = UIColor.black.cgColor
-        self.pageLabel.layer.borderWidth = 0.3
-        
+    
         
         TorikumuButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
+    
     }
     
 
@@ -53,5 +58,6 @@ class CalculateViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

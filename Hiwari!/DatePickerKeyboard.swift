@@ -1,13 +1,6 @@
-//
-//  PickerKeyboard3ViewController.swift
-//  Hiwari!
-//
-//  Created by Yuma Ikeda on 2021/05/27.
-//単位を選ぶPickerViewの作成
-
 import UIKit
 
-class PickerKeyboard3: UIControl {
+class DatePickerKeyboard: UIControl {
     
     /*
      // Only override draw() if you perform custom drawing.
@@ -16,9 +9,79 @@ class PickerKeyboard3: UIControl {
      // Drawing code
      }
      */
-    var pageLabel :UILabel?
+    var startLabel:UILabel?
     
-    let array:[String] = ["","ページ","章","問","単語"]
+    let dayOfMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        var monthIndex = 0
+        
+        init(bounds: CGRect) {
+            let baseWidth = 375.0
+            let baseHeight = 260.0
+            let viewRate = Double(bounds.width) / baseWidth
+            let pickerRect = CGRect(x: 0, y: 0, width: baseWidth * viewRate, height: baseHeight * viewRate)
+            super.init(frame: pickerRect)
+            commonInit()
+        }
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            commonInit()
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+            commonInit()
+        }
+        
+        func getMonthAndDay() -> String {
+            let month = "\(pickerView.selectedRow(inComponent: 0) + 1)月"
+            let day = "\(pickerView.selectedRow(inComponent: 1) + 1)日"
+            return month + day
+        }
+        
+        private func commonInit() {
+            let view = Bundle.main.loadNibNamed("MonthAndDayPicker", owner: self, options: nil)?.first as! UIView
+            view.frame = self.bounds
+            view.translatesAutoresizingMaskIntoConstraints = true
+            view.autoresizingMask = .flexibleWidth
+            self.addSubview(view)
+            
+            // Pickerの設定
+            pickerView.delegate = self
+        }
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 2
+        }
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            switch component {
+            case 0:
+                return dayOfMonth.count
+            case 1:
+                return dayOfMonth[monthIndex]
+            default:
+                return 0
+            }
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            if component == 0 {
+                return "\(row + 1)月"
+            } else if component == 1 {
+                return "\(row + 1)日"
+            } else {
+                return nil
+            }
+        }
+     
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            if component == 0 {
+                // 選択している月が変わった場合最終日が変わるので、日を再生成する
+                monthIndex = row
+                pickerView.reloadComponent(1)
+            }
+        }
+    }
+  
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,7 +89,7 @@ class PickerKeyboard3: UIControl {
         addTarget(self, action: #selector(tappedPickerKeyboard(_:)), for: .touchDown)
     }
     
-    @objc func tappedPickerKeyboard(_ sender: PickerKeyboard3) {
+    @objc func tappedPickerKeyboard(_ sender: PickerKeyboard2) {
         becomeFirstResponder()
     }
     
@@ -83,7 +146,7 @@ class PickerKeyboard3: UIControl {
     }
 }
 
-extension PickerKeyboard3: UIPickerViewDelegate, UIPickerViewDataSource {
+extension DatePickerKeyboard: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -99,7 +162,7 @@ extension PickerKeyboard3: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // delegateなどでViewControllerに選択された情報を渡す
-        pageLabel?.text = array[row]
+       startLabel?.text = array[row]
         
     }
 }

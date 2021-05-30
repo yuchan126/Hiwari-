@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270C9B732663B4E200FA2732 /* DatePickerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C9B722663B4E200FA2732 /* DatePickerKeyboard.swift */; };
 		27471EED265A034E00CE3E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EEC265A034E00CE3E47 /* AppDelegate.swift */; };
 		27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EEE265A034E00CE3E47 /* SceneDelegate.swift */; };
 		27471EF1265A034E00CE3E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EF0265A034E00CE3E47 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270C9B722663B4E200FA2732 /* DatePickerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerKeyboard.swift; sourceTree = "<group>"; };
 		27471EE9265A034E00CE3E47 /* Hiwari!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hiwari!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27471EEC265A034E00CE3E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27471EEE265A034E00CE3E47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				27471EEE265A034E00CE3E47 /* SceneDelegate.swift */,
 				27471EF0265A034E00CE3E47 /* ViewController.swift */,
 				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
+				270C9B722663B4E200FA2732 /* DatePickerKeyboard.swift */,
 				2763CC60265F1E0600248C18 /* PickerKeyboard2ViewController.swift */,
 				2763CC65265F1EE300248C18 /* PickerKeyboard3ViewController.swift */,
 				2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */,
@@ -290,6 +293,7 @@
 				27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */,
 				2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */,
 				2763CC61265F1E0700248C18 /* PickerKeyboard2ViewController.swift in Sources */,
+				270C9B732663B4E200FA2732 /* DatePickerKeyboard.swift in Sources */,
 				2763CC3F265D1C8100248C18 /* TodolistTableViewController.swift in Sources */,
 				2763CC6B265F1F8400248C18 /* PickerKeyboard4ViewController.swift in Sources */,
 				2763CC66265F1EE300248C18 /* PickerKeyboard3ViewController.swift in Sources */,

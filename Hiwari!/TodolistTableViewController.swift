@@ -8,6 +8,8 @@
 import UIKit
 
 class TodolistTableViewController: UITableViewController {
+    @IBOutlet var todoTaskLabel: UILabel!
+    @IBOutlet var finishDateLabel: UILabel!
     
     
     override func viewDidLoad() {
