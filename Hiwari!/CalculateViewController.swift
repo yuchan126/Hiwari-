@@ -7,35 +7,45 @@
 
 import UIKit
 
+var Todotask = [String]()
+
 class CalculateViewController: UIViewController {
     
     @IBOutlet var taskLabel : UILabel!
-    @IBOutlet var startmonthLabel : UILabel!
-    @IBOutlet var startdateLabel : UILabel!
-    @IBOutlet var finishmonthLabel : UILabel!
-    @IBOutlet var finishdateLabel : UILabel!
+    @IBOutlet var startdateLabel: UILabel!
+    @IBOutlet var finishdateLabel: UILabel!
     @IBOutlet var TorikumuButton : UIButton!
     @IBOutlet var dayTaskLabel : UILabel!
     @IBOutlet var totalLabel : UILabel!
     @IBOutlet var pageLabel: UILabel!
     
     
+    
     var taskName: String?
-    var startmonthName: String?
-    var startdateName: String?
-    var finishmonthName: String?
-    var finishdateName: String?
+    var startDate: String?
+    var finishDate : String?
     var totalAmount: String?
     var pageName: String?
 
+    @IBAction func TorikumuButton(_sender: Any){
+         Todotask.append(taskLabel.text!)
+       taskLabel.text = ""
+        startdateLabel.text = ""
+        finishdateLabel.text = ""
+        dayTaskLabel.text = ""
+        totalLabel.text = ""
+        pageLabel.text = ""
+        
+        UserDefaults.standard.set( Todotask, forKey: "TodoList" )
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         taskLabel.text = taskName
-        startmonthLabel.text = startmonthName
-        startdateLabel.text = startdateName
-        finishmonthLabel.text = finishmonthName
-        finishdateLabel.text = finishdateName
+        startdateLabel.text = startDate
+        finishdateLabel.text = finishDate
         totalLabel.text = totalAmount
         pageLabel.text = pageName
         
@@ -45,6 +55,8 @@ class CalculateViewController: UIViewController {
         
         TorikumuButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
+        
+      
     
     }
     

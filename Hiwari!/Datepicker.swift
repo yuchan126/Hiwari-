@@ -2,7 +2,7 @@
 import UIKit
 
 
-class DatePickerKeyboard2: UITextField {
+class DatePickerKeyboard: UITextField {
     private var datePicker: UIDatePicker!
 
     required init?(coder aDecoder: NSCoder) {
@@ -23,7 +23,6 @@ class DatePickerKeyboard2: UITextField {
         datePicker.addTarget(self, action: #selector(setText), for: .valueChanged)
 
         // textFieldのtextに日付を表示する
-        setText()
         datePicker.preferredDatePickerStyle = .wheels
         inputView = datePicker
         inputAccessoryView = createToolbar()
