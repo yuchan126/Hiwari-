@@ -319,7 +319,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TorikumuButtonWith_sender:" destination="UCi-ng-2su" eventType="touchUpInside" id="7XM-zP-Y2D"/>
-                                    <segue destination="NI7-W8-Br4" kind="presentation" modalPresentationStyle="fullScreen" id="4Ho-CA-cBY"/>
+                                    <segue destination="Pm0-vN-eML" kind="presentation" identifier="TodoViewController" modalPresentationStyle="fullScreen" id="3fR-Dc-YpM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,7 +333,7 @@
                         <outlet property="finishdateLabel" destination="Cjo-am-DOO" id="9y4-Jz-KTX"/>
                         <outlet property="pageLabel" destination="UP0-QH-aFn" id="7ZK-cr-WE3"/>
                         <outlet property="startdateLabel" destination="pri-hw-HDI" id="14G-6f-2eI"/>
-                        <outlet property="taskLabel" destination="gE0-gp-e5A" id="nts-Jl-3Ve"/>
+                        <outlet property="taskNameLabel" destination="gE0-gp-e5A" id="Ola-SL-ExJ"/>
                         <outlet property="totalLabel" destination="U2S-37-tyL" id="9XO-st-iF0"/>
                     </connections>
                 </viewController>
@@ -341,63 +341,73 @@
             </objects>
             <point key="canvasLocation" x="766.66666666666674" y="75.669642857142847"/>
         </scene>
-        <!--Todo View Controller-->
-        <scene sceneID="auX-0u-JjM">
+        <!--List Table View Controller-->
+        <scene sceneID="L7y-HJ-dUx">
             <objects>
-                <viewController id="NI7-W8-Br4" customClass="TodoViewController" customModule="Hiwari_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AtG-tJ-iPD">
+                <tableViewController id="Pm0-vN-eML" customClass="ListTableViewController" customModule="Hiwari_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="z67-ui-NR4" customClass="TodoViewController" customModule="Hiwari_" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Siu-cy-xMB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="ToDoList" id="Zxq-gX-kWp">
-                                        <barButtonItem key="rightBarButtonItem" title="追加" id="kE0-8g-qeS">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="0kk-Zz-j1q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HAl-IK-WVc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Adl-dP-v4P">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Adl-dP-v4P" id="cLj-Ep-UF7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="AtG-tJ-iPD" id="gfT-HF-JNP"/>
-                                    <outlet property="delegate" destination="AtG-tJ-iPD" id="oBi-g4-MdC"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="62R-RR-bRR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Unl-YV-ra1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="FOd-Pb-rNW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="ToDo List" id="WlM-lZ-1x2">
+                                    <barButtonItem key="rightBarButtonItem" title="追加" id="0vn-Ao-aq8">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="6r6-zL-u0g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" rowHeight="56" id="F49-dj-Yfy" customClass="TodoTableViewCell" customModule="Hiwari_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F49-dj-Yfy" id="fZe-GJ-hJg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7a-ms-9Eq">
+                                            <rect key="frame" x="245" y="3" width="155" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94309452360000001" green="0.80654812949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14r-ho-ZR2">
+                                            <rect key="frame" x="20" y="3" width="155" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.94309452360000001" green="0.80654812949999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="taskamountLabel" destination="N7a-ms-9Eq" id="RQr-h9-bcY"/>
+                                    <outlet property="todoLabel" destination="14r-ho-ZR2" id="hHK-8o-Vhk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOp-8r-uGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556.521739130435" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1550.7246376811595" y="75.669642857142847"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rnq-dN-00j"/>
+        <segue reference="6r6-zL-u0g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="#41B593.png" width="265" height="241"/>

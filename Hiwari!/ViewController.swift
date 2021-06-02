@@ -33,6 +33,7 @@ class ViewController: UIViewController {
  
         //pickerViewの設定
         pagepickerKeyoboard.pageLabel = pageLabel
+        notificationpickerKeyboard.notificationLabel = notificationLabel
         
         //ボタンの枠をつける
         pageView.layer.borderColor = UIColor.black.cgColor
@@ -57,8 +58,8 @@ class ViewController: UIViewController {
            }
        }
     @IBAction func tapHiwariButton(_ sender: Any) {
-            
             performSegue(withIdentifier: "CalculateViewController", sender: nil)
+        
         }
 
 
