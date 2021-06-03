@@ -24,13 +24,30 @@ class CalculateViewController: UIViewController {
     var finishDate : String?
     var totalAmount: String?
     var pageName: String?
+    var number: Int = 0
     
     var wordArray: [Dictionary<String,String>]=[]
     let saveData = UserDefaults.standard
+    
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        let dateFormatter = DateFormatter()
+    
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.timeZone = TimeZone(identifier:  "Asia/Tokyo")
+         
+        dateFormatter.dateFormat = "yyyy年M月d日(EEEEE)"
+        
+        let date = dateFormatter.date(from: "2020年4月25日(土)")
+        print(date!)
+        DateFormatter.date(from: String) -> date 
+        
         
         if saveData.array(forKey: "WORD") != nil{
             wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
@@ -70,7 +87,7 @@ class CalculateViewController: UIViewController {
             
             
         }
-
+    
     
 
     /*
