@@ -7,13 +7,20 @@
 
 import UIKit
 
+
+
 class ListTableViewController: UITableViewController {
 
     var wordArray: [Dictionary<String,String>] = []
     let saveData = UserDefaults.standard
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
     }
     
@@ -36,6 +43,7 @@ class ListTableViewController: UITableViewController {
                 
                 return TodoCell
             }
+    
 
     // MARK: - Table view data source
 
@@ -44,7 +52,21 @@ class ListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
+    func tableView(_tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
+            let todoTitle = Todotask[indexPath.row]
+            cell.textLabel?.text = todoTitle
+            return cell
+        }
+        // 追加：セルの削除機能
+        func tableView(_ableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == UITableViewCell.EditingStyle.delete {
+                Todotask.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+            }
+        }
+    }
 
    
 
@@ -103,4 +125,4 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-}
+

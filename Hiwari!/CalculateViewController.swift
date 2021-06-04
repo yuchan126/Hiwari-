@@ -24,7 +24,7 @@ class CalculateViewController: UIViewController {
     var finishDate : String?
     var totalAmount: String?
     var pageName: String?
-    var number: Int = 0
+    var number: Double?
     
     var wordArray: [Dictionary<String,String>]=[]
     let saveData = UserDefaults.standard
@@ -35,20 +35,37 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+
+        let date1 = dateFormatter.date(from: startDate!)
+        let date2 = dateFormatter.date(from: finishDate!)
     
-        dateFormatter.calendar = Calendar(identifier: .gregorian)
-        dateFormatter.locale = Locale(identifier: "ja_JP")
-        dateFormatter.timeZone = TimeZone(identifier:  "Asia/Tokyo")
-         
-        dateFormatter.dateFormat = "yyyy年M月d日(EEEEE)"
+        func getIntervalDays(date:Date?,anotherDay:Date? = nil) -> Double {
+
+            var retInterval:Double!
+
+            if anotherDay == nil {
+                retInterval = date?.timeIntervalSinceNow
+            } else {
+                retInterval = date?.timeIntervalSince(anotherDay!)
+            }
+
+            let ret = retInterval/86400
+
+            return floor(ret)  // n日
+        }
+// ex. ２つの日付の差
         
-        let date = dateFormatter.date(from: "2020年4月25日(土)")
-        print(date!)
-        DateFormatter.date(from: String) -> date 
+        let doubleNum: Double = Double(Int(totalLabel.text!)!) / (getIntervalDays(date: date1,anotherDay: date2))
+        dayTaskLabel.text = String("\(doubleNum)")
+      
         
-        
+    
+       
         if saveData.array(forKey: "WORD") != nil{
             wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
         }
