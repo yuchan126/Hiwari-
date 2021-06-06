@@ -13,15 +13,9 @@ class ListTableViewController: UITableViewController {
 
     var wordArray: [Dictionary<String,String>] = []
     let saveData = UserDefaults.standard
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,29 +30,20 @@ class ListTableViewController: UITableViewController {
                 return Todotask.count
             }
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
             let TodoCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoTableViewCell
-        
-            TodoCell.todoLabel!.text = Todotask[indexPath.row]
-                
+            
+            let nowIndexpathDictionary = wordArray[indexPath.row]
+            TodoCell.todoLabel.text = nowIndexpathDictionary["タスク名"]
+            TodoCell.taskamountLabel.text = nowIndexpathDictionary["何ページ"]
                 return TodoCell
             }
-    
-
-    // MARK: - Table view data source
-
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+
     
-    func tableView(_tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
-            let todoTitle = Todotask[indexPath.row]
-            cell.textLabel?.text = todoTitle
-            return cell
-        }
         // 追加：セルの削除機能
         func tableView(_ableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == UITableViewCell.EditingStyle.delete {

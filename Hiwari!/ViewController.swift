@@ -58,6 +58,11 @@ class ViewController: UIViewController {
            }
        }
     @IBAction func tapHiwariButton(_ sender: Any) {
+        let alert = UIAlertController(
+            title:"",
+         message: "全ての項目に入力してください",
+            preferredStyle: .alert)
+        self.present(alert,animated: true, completion: nil)
             performSegue(withIdentifier: "CalculateViewController", sender: nil)
         
         }

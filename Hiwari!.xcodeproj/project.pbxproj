@@ -24,6 +24,7 @@
 		278ACB94265A7EA700663172 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB93265A7EA700663172 /* green.png */; };
 		278ACB99265B35C800663172 /* #41B593.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB98265B35C800663172 /* #41B593.png */; };
 		278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ACBA5265BE62100663172 /* CalculateViewController.swift */; };
+		27B097D7266C67B900ACE663 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B097D6266C67B900ACE663 /* StartViewController.swift */; };
 		27C6A422266910A000413149 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C6A421266910A000413149 /* checked.png */; };
 		27C6A427266910F700413149 /* checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C6A426266910F700413149 /* checkbox.swift */; };
 		27C6A438266A0C0800413149 /* unchekedbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C6A437266A0C0800413149 /* unchekedbox.png */; };
@@ -70,6 +71,7 @@
 		278ACB93265A7EA700663172 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		278ACB98265B35C800663172 /* #41B593.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#41B593.png"; sourceTree = "<group>"; };
 		278ACBA5265BE62100663172 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		27B097D6266C67B900ACE663 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		27C6A421266910A000413149 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		27C6A426266910F700413149 /* checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkbox.swift; sourceTree = "<group>"; };
 		27C6A437266A0C0800413149 /* unchekedbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchekedbox.png; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				27C6A437266A0C0800413149 /* unchekedbox.png */,
 				27471EEC265A034E00CE3E47 /* AppDelegate.swift */,
 				27471EEE265A034E00CE3E47 /* SceneDelegate.swift */,
+				27B097D6266C67B900ACE663 /* StartViewController.swift */,
 				27471EF0265A034E00CE3E47 /* ViewController.swift */,
 				270C9B7D2663C21500FA2732 /* Datepicker.swift */,
 				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
@@ -136,8 +139,8 @@
 				2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */,
 				278ACBA5265BE62100663172 /* CalculateViewController.swift */,
 				27C6A426266910F700413149 /* checkbox.swift */,
-				27645705266707DA00827129 /* TodoTableViewCell.swift */,
 				2764570D266707F600827129 /* ListTableViewController.swift */,
+				27645705266707DA00827129 /* TodoTableViewCell.swift */,
 				27471EF2265A034E00CE3E47 /* Main.storyboard */,
 				27471EF5265A035000CE3E47 /* Assets.xcassets */,
 				27471EF7265A035000CE3E47 /* LaunchScreen.storyboard */,
@@ -303,6 +306,7 @@
 				27645706266707DA00827129 /* TodoTableViewCell.swift in Sources */,
 				2764570E266707F600827129 /* ListTableViewController.swift in Sources */,
 				27471EED265A034E00CE3E47 /* AppDelegate.swift in Sources */,
+				27B097D7266C67B900ACE663 /* StartViewController.swift in Sources */,
 				27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */,
 				27C6A427266910F700413149 /* checkbox.swift in Sources */,
 				2763CC50265E763500248C18 /* PickerKeyboard.swift in Sources */,
@@ -487,6 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32A62NCVK4;
 				INFOPLIST_FILE = "Hiwari!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32A62NCVK4;
 				INFOPLIST_FILE = "Hiwari!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,22 +8,24 @@
 import UIKit
 
 var Todotask = [String]()
+var Todopage = [String]()
 
 class CalculateViewController: UIViewController {
     
-    @IBOutlet var taskNameLabel : UILabel!
+    @IBOutlet var taskNameLabel : UILabel!   //タスク名
     @IBOutlet var startdateLabel: UILabel!
     @IBOutlet var finishdateLabel: UILabel!
     @IBOutlet var TorikumuButton : UIButton!
     @IBOutlet var dayTaskLabel : UILabel!
     @IBOutlet var totalLabel : UILabel!
     @IBOutlet var pageLabel: UILabel!
-
+  
     var taskName: String?
     var startDate: String?
     var finishDate : String?
     var totalAmount: String?
     var pageName: String?
+    var dayTask: String?
     var number: Double?
     
     var wordArray: [Dictionary<String,String>]=[]
@@ -35,9 +37,33 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if saveData.array(forKey: "WORD") != nil{
+            wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
+        }
+        let wordDictionary = ["タスク名": taskNameLabel.text!, "何ページ":dayTaskLabel.text!]
+        wordArray.append(wordDictionary)
+        saveData.set(wordArray,forKey: "WORD")
+        
+        taskNameLabel.text = taskName
+        startdateLabel.text = startDate
+        finishdateLabel.text = finishDate
+        totalLabel.text = totalAmount
+        pageLabel.text = pageName
+        dayTaskLabel.text = dayTask
+       
+        
+        taskNameLabel.layer.borderColor = UIColor.black.cgColor
+        self.taskNameLabel.layer.borderWidth = 0.3
+    
+        
+        TorikumuButton.layer.cornerRadius = 20
+        // Do any additional setup after loading the view.
+    
+    
+        
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+        dateFormatter.dateFormat = "yyyy年MM月dd日"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
 
@@ -59,31 +85,16 @@ class CalculateViewController: UIViewController {
             return floor(ret)  // n日
         }
 // ex. ２つの日付の差
-        
-        let doubleNum: Double = Double(Int(totalLabel.text!)!) / (getIntervalDays(date: date1,anotherDay: date2))
-        dayTaskLabel.text = String("\(doubleNum)")
+    
+        number = Double(Int(totalLabel.text!)!)/(getIntervalDays(date: date2,anotherDay: date1))
+        let roundedValue = (number)!.rounded(.up)
+        let suji:Double = roundedValue
+        let sNum5:String = "\(suji)"
+        dayTaskLabel.text = (String(sNum5) + pageName!)
       
-        
-    
-       
-        if saveData.array(forKey: "WORD") != nil{
-            wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
-        }
-        
-        taskNameLabel.text = taskName
-        startdateLabel.text = startDate
-        finishdateLabel.text = finishDate
-        totalLabel.text = totalAmount
-        pageLabel.text = pageName
-        
-        taskNameLabel.layer.borderColor = UIColor.black.cgColor
-        self.taskNameLabel.layer.borderWidth = 0.3
-    
-        
-        TorikumuButton.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
-    
     }
+       
+       
     @IBAction func TorikumuButton(_sender: Any){
         
         let taskDictionary = ["Name1": taskNameLabel.text!, "Name2": dayTaskLabel.text!]
