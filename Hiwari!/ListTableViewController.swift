@@ -9,13 +9,14 @@ import UIKit
 
 
 
-class ListTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController  {
 
     var wordArray: [Dictionary<String,String>] = []
     let saveData = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,8 +36,18 @@ class ListTableViewController: UITableViewController {
             let nowIndexpathDictionary = wordArray[indexPath.row]
             TodoCell.todoLabel.text = nowIndexpathDictionary["Name1",default: "Name2"]
             TodoCell.taskamountLabel.text = nowIndexpathDictionary["Name2"]
+            
+            TodoCell.selectionStyle = UITableViewCell.SelectionStyle.none
+            //自分で色を設定したい場合は、タップ時の色を指定したUIViewを代入
+            let selectionView = UIView()
+            //タップすると赤色になる
+            selectionView.backgroundColor = UIColor.white
+            TodoCell.selectedBackgroundView = selectionView
                 return TodoCell
-            }
+            
+               }
+            
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
