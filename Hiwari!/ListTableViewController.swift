@@ -27,14 +27,14 @@ class ListTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 //表示するcell数
-                return Todotask.count
+                return wordArray.count
             }
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let TodoCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoTableViewCell
             
             let nowIndexpathDictionary = wordArray[indexPath.row]
-            TodoCell.todoLabel.text = nowIndexpathDictionary["タスク名"]
-            TodoCell.taskamountLabel.text = nowIndexpathDictionary["何ページ"]
+            TodoCell.todoLabel.text = nowIndexpathDictionary["Name1",default: "Name2"]
+            TodoCell.taskamountLabel.text = nowIndexpathDictionary["Name2"]
                 return TodoCell
             }
 
@@ -43,11 +43,9 @@ class ListTableViewController: UITableViewController {
         return 1
     }
 
-    
-        // 追加：セルの削除機能
         func tableView(_ableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == UITableViewCell.EditingStyle.delete {
-                Todotask.remove(at: indexPath.row)
+                wordArray.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
             }
         }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-var Todotask = [String]()
-var Todopage = [String]()
+
 
 class CalculateViewController: UIViewController {
     
@@ -36,13 +35,6 @@ class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if saveData.array(forKey: "WORD") != nil{
-            wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
-        }
-        let wordDictionary = ["タスク名": taskNameLabel.text!, "何ページ":dayTaskLabel.text!]
-        wordArray.append(wordDictionary)
-        saveData.set(wordArray,forKey: "WORD")
         
         taskNameLabel.text = taskName
         startdateLabel.text = startDate
@@ -93,26 +85,15 @@ class CalculateViewController: UIViewController {
         dayTaskLabel.text = (String(sNum5) + pageName!)
       
     }
-       
-       
     @IBAction func TorikumuButton(_sender: Any){
         
         let taskDictionary = ["Name1": taskNameLabel.text!, "Name2": dayTaskLabel.text!]
+        let saveData = UserDefaults.standard
+        if saveData.array(forKey: "WORD") != nil{
+         performSegue(withIdentifier: "TodoViewController", sender: nil)
+        }
         wordArray.append(taskDictionary)
         saveData.setValue(wordArray, forKey: "WORD")
-        
-     performSegue(withIdentifier: "TodoViewController", sender: nil)
-        
-         Todotask.append(taskNameLabel.text!)
-       taskNameLabel.text = ""
-        startdateLabel.text = ""
-        finishdateLabel.text = ""
-        dayTaskLabel.text = ""
-        totalLabel.text = ""
-        pageLabel.text = ""
-        
-        UserDefaults.standard.set( Todotask, forKey: "TodoList" )
-            
             
         }
     

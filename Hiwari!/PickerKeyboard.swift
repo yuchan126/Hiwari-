@@ -39,6 +39,7 @@ class DatePickerKeyboard2: UITextField {
         let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
     
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+    
 
         let toolbarItems = [flexSpaceItem,doneButtonItem, space]
 
@@ -51,7 +52,10 @@ class DatePickerKeyboard2: UITextField {
     @objc private func donePicker() {
         resignFirstResponder()
     }
-   
+    @objc private func todayPicker() {
+            datePicker.date = Date()
+            setText()
+    }
 
     // datePickerの日付けをtextFieldのtextに反映させる
     @objc private func setText() {

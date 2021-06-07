@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var pageView : UIView!
     @IBOutlet var notificationView : UIView!
@@ -30,7 +30,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        TodoTextField.delegate = self
+        amountTextField.delegate = self
         //pickerViewの設定
         pagepickerKeyoboard.pageLabel = pageLabel
         notificationpickerKeyboard.notificationLabel = notificationLabel
@@ -44,8 +45,13 @@ class ViewController: UIViewController {
         self.notificationView.layer.borderWidth = 0.3
         HiwariButton.layer.cornerRadius = 20
         
-        
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            // キーボードを閉じる
+            textField.resignFirstResponder()
+            return true
+        }
     //画面遷移の話
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "CalculateViewController" {
@@ -58,11 +64,6 @@ class ViewController: UIViewController {
            }
        }
     @IBAction func tapHiwariButton(_ sender: Any) {
-        let alert = UIAlertController(
-            title:"",
-         message: "全ての項目に入力してください",
-            preferredStyle: .alert)
-        self.present(alert,animated: true, completion: nil)
             performSegue(withIdentifier: "CalculateViewController", sender: nil)
         
         }

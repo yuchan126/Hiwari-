@@ -9,9 +9,14 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet var addTaskButton: UIButton!
+    @IBOutlet var gotoListButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       addTaskButton.layer.cornerRadius = 20
+        gotoListButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     

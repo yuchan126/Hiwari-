@@ -38,8 +38,9 @@ class DatePickerKeyboard: UITextField {
         let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
     
         let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePicker))
+        let todayButtonItem = UIBarButtonItem(title: "今日", style: .done, target: self, action: #selector(todayPicker))
 
-        let toolbarItems = [flexSpaceItem,doneButtonItem, space]
+        let toolbarItems = [flexSpaceItem,todayButtonItem, doneButtonItem, space]
 
         toolbar.setItems(toolbarItems, animated: true)
 
@@ -49,6 +50,10 @@ class DatePickerKeyboard: UITextField {
     // キーボードの完了ボタンタップ時に呼ばれる
     @objc private func donePicker() {
         resignFirstResponder()
+    }
+    @objc private func todayPicker() {
+            datePicker.date = Date()
+            setText()
     }
    
 

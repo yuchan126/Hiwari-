@@ -125,6 +125,7 @@
 		27471EEB265A034E00CE3E47 /* Hiwari! */ = {
 			isa = PBXGroup;
 			children = (
+				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
 				278ACB98265B35C800663172 /* #41B593.png */,
 				278ACB93265A7EA700663172 /* green.png */,
 				27C6A421266910A000413149 /* checked.png */,
@@ -134,7 +135,6 @@
 				27B097D6266C67B900ACE663 /* StartViewController.swift */,
 				27471EF0265A034E00CE3E47 /* ViewController.swift */,
 				270C9B7D2663C21500FA2732 /* Datepicker.swift */,
-				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
 				2763CC65265F1EE300248C18 /* PickerKeyboard3ViewController.swift */,
 				2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */,
 				278ACBA5265BE62100663172 /* CalculateViewController.swift */,
