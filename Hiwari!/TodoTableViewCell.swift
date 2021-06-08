@@ -14,9 +14,7 @@ class TodoTableViewCell: UITableViewCell {
     @IBOutlet var checkBox: UIButton!
     
     @IBAction func checkView(_ sender: CheckBox) {
-
             print(sender.isChecked)
-
         }
     
     override func awakeFromNib() {

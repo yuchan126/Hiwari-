@@ -90,6 +90,7 @@ class CalculateViewController: UIViewController {
         let taskDictionary = ["Name1": taskNameLabel.text!, "Name2": dayTaskLabel.text!]
         let saveData = UserDefaults.standard
         if saveData.array(forKey: "WORD") != nil{
+        wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
          performSegue(withIdentifier: "TodoViewController", sender: nil)
         }
         wordArray.append(taskDictionary)

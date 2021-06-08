@@ -45,8 +45,21 @@ class ListTableViewController: UITableViewController  {
             TodoCell.selectedBackgroundView = selectionView
                 return TodoCell
             
-               }
+                           }
             
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+        {
+            return true
+        }
+
+        //スワイプしたセルを削除　
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+                wordArray.remove(at: indexPath.row)
+                UserDefaults.standard.set(wordArray, forKey: "WORD" )
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+            }
+        }
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,12 +67,7 @@ class ListTableViewController: UITableViewController  {
         return 1
     }
 
-        func tableView(_ableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == UITableViewCell.EditingStyle.delete {
-                wordArray.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-            }
-        }
+       
     }
 
    
