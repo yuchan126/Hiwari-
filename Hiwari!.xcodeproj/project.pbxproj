@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		270C9B7E2663C21500FA2732 /* Datepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C9B7D2663C21500FA2732 /* Datepicker.swift */; };
-		273F6910266F5036006DB893 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 273F690F266F5036006DB893 /* icon.png */; };
+		273F6912266F5EE3006DB893 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 273F6911266F5EE3006DB893 /* icon.png */; };
+		273F6914266F90A8006DB893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F6913266F90A8006DB893 /* DetailViewController.swift */; };
 		27471EED265A034E00CE3E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EEC265A034E00CE3E47 /* AppDelegate.swift */; };
 		27471EEF265A034E00CE3E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EEE265A034E00CE3E47 /* SceneDelegate.swift */; };
 		27471EF1265A034E00CE3E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27471EF0265A034E00CE3E47 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		2763CC6B265F1F8400248C18 /* PickerKeyboard4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */; };
 		27645706266707DA00827129 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27645705266707DA00827129 /* TodoTableViewCell.swift */; };
 		2764570E266707F600827129 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764570D266707F600827129 /* ListTableViewController.swift */; };
+		27794CEF2670D35C00EE2F30 /* otameshi.png in Resources */ = {isa = PBXBuildFile; fileRef = 27794CEE2670D35C00EE2F30 /* otameshi.png */; };
 		278ACB94265A7EA700663172 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB93265A7EA700663172 /* green.png */; };
 		278ACB99265B35C800663172 /* #41B593.png in Resources */ = {isa = PBXBuildFile; fileRef = 278ACB98265B35C800663172 /* #41B593.png */; };
 		278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278ACBA5265BE62100663172 /* CalculateViewController.swift */; };
@@ -50,7 +52,8 @@
 
 /* Begin PBXFileReference section */
 		270C9B7D2663C21500FA2732 /* Datepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datepicker.swift; sourceTree = "<group>"; };
-		273F690F266F5036006DB893 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		273F6911266F5EE3006DB893 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		273F6913266F90A8006DB893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		27471EE9265A034E00CE3E47 /* Hiwari!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hiwari!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27471EEC265A034E00CE3E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27471EEE265A034E00CE3E47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		2763CC6A265F1F8400248C18 /* PickerKeyboard4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerKeyboard4ViewController.swift; sourceTree = "<group>"; };
 		27645705266707DA00827129 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		2764570D266707F600827129 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		27794CEE2670D35C00EE2F30 /* otameshi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otameshi.png; sourceTree = SOURCE_ROOT; };
 		278ACB93265A7EA700663172 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		278ACB98265B35C800663172 /* #41B593.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#41B593.png"; sourceTree = "<group>"; };
 		278ACBA5265BE62100663172 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -128,8 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				2763CC4F265E763500248C18 /* PickerKeyboard.swift */,
+				273F6911266F5EE3006DB893 /* icon.png */,
 				278ACB98265B35C800663172 /* #41B593.png */,
-				273F690F266F5036006DB893 /* icon.png */,
+				27794CEE2670D35C00EE2F30 /* otameshi.png */,
 				278ACB93265A7EA700663172 /* green.png */,
 				27C6A421266910A000413149 /* checked.png */,
 				27C6A437266A0C0800413149 /* unchekedbox.png */,
@@ -144,6 +149,7 @@
 				27C6A426266910F700413149 /* checkbox.swift */,
 				2764570D266707F600827129 /* ListTableViewController.swift */,
 				27645705266707DA00827129 /* TodoTableViewCell.swift */,
+				273F6913266F90A8006DB893 /* DetailViewController.swift */,
 				27471EF2265A034E00CE3E47 /* Main.storyboard */,
 				27471EF5265A035000CE3E47 /* Assets.xcassets */,
 				27471EF7265A035000CE3E47 /* LaunchScreen.storyboard */,
@@ -275,9 +281,10 @@
 			files = (
 				27C6A438266A0C0800413149 /* unchekedbox.png in Resources */,
 				278ACB99265B35C800663172 /* #41B593.png in Resources */,
+				27794CEF2670D35C00EE2F30 /* otameshi.png in Resources */,
 				27471EF9265A035000CE3E47 /* LaunchScreen.storyboard in Resources */,
 				278ACB94265A7EA700663172 /* green.png in Resources */,
-				273F6910266F5036006DB893 /* icon.png in Resources */,
+				273F6912266F5EE3006DB893 /* icon.png in Resources */,
 				27471EF6265A035000CE3E47 /* Assets.xcassets in Resources */,
 				27C6A422266910A000413149 /* checked.png in Resources */,
 				27471EF4265A034E00CE3E47 /* Main.storyboard in Resources */,
@@ -305,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273F6914266F90A8006DB893 /* DetailViewController.swift in Sources */,
 				27471EF1265A034E00CE3E47 /* ViewController.swift in Sources */,
 				278ACBA6265BE62100663172 /* CalculateViewController.swift in Sources */,
 				27645706266707DA00827129 /* TodoTableViewCell.swift in Sources */,

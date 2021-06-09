@@ -56,11 +56,12 @@ class ViewController: UIViewController,UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if segue.identifier == "CalculateViewController" {
                let next = segue.destination as? CalculateViewController
-               next?.taskName = self.TodoTextField.text
+            next?.taskName = self.TodoTextField.text
             next?.totalAmount = self.amountTextField.text
             next?.pageName = self.pageLabel.text
             next?.startDate = self.startdateTextField.text
             next?.finishDate = self.finishdateTextField.text
+            next?.notification = self.notificationLabel.text
            }
        }
     @IBAction func tapHiwariButton(_ sender: Any) {

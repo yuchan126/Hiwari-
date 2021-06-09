@@ -46,6 +46,11 @@ class ListTableViewController: UITableViewController  {
                 return TodoCell
             
                            }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
             
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
         {
@@ -60,13 +65,12 @@ class ListTableViewController: UITableViewController  {
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
             }
         }
-
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
+     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            // セルの選択を解除
+            tableView.deselectRow(at: indexPath, animated: true)
+    
+        }
        
     }
 

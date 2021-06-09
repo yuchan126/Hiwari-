@@ -26,13 +26,13 @@ class CalculateViewController: UIViewController {
     var pageName: String?
     var dayTask: String?
     var number: Double?
+    var notification: String?
     
     var wordArray: [Dictionary<String,String>]=[]
     let saveData = UserDefaults.standard
     
     
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,28 +52,23 @@ class CalculateViewController: UIViewController {
         // Do any additional setup after loading the view.
     
     
-        
+        //値の変換
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy年MM月dd日"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
-
         let date1 = dateFormatter.date(from: startDate!)
         let date2 = dateFormatter.date(from: finishDate!)
-    
+    //日付の計算
         func getIntervalDays(date:Date?,anotherDay:Date? = nil) -> Double {
-
             var retInterval:Double!
-
             if anotherDay == nil {
                 retInterval = date?.timeIntervalSinceNow
             } else {
                 retInterval = date?.timeIntervalSince(anotherDay!)
             }
-
             let ret = retInterval/86400
-
             return floor(ret)  // n日
         }
 // ex. ２つの日付の差
@@ -88,15 +83,17 @@ class CalculateViewController: UIViewController {
     @IBAction func TorikumuButton(_sender: Any){
         
         let taskDictionary = ["Name1": taskNameLabel.text!, "Name2": dayTaskLabel.text!]
-        let saveData = UserDefaults.standard
         if saveData.array(forKey: "WORD") != nil{
         wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
          performSegue(withIdentifier: "TodoViewController", sender: nil)
         }
         wordArray.append(taskDictionary)
         saveData.setValue(wordArray, forKey: "WORD")
-            
+        saveData.setValue(notification, forKey: "Notification")
+        saveData.setValue(finishDate,forKey:"Finishdate")
+        saveData.object(forKey: "Checkbox")
         }
+  
     
     
 
@@ -112,3 +109,4 @@ class CalculateViewController: UIViewController {
 
 
 }
+
