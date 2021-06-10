@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCJ-9Z-xEs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCJ-9Z-xEs">
                                 <rect key="frame" x="89" y="614" width="237" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="TlH-Rp-PxI"/>
+                                    <constraint firstAttribute="height" constant="75" id="gl9-vR-ICs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TsukuARdGothic-Bold" family="Tsukushi A Round Gothic" pointSize="35"/>
                                 <state key="normal" title=" タスク追加">
                                     <color key="titleColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,10 +32,13 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Jo2-pZ-NGw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0is-7i-8ih">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0is-7i-8ih">
                                 <rect key="frame" x="89" y="739" width="237" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="M7w-8s-kT2"/>
+                                    <constraint firstAttribute="height" constant="75" id="csV-FZ-U2N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TsukuARdGothic-Bold" family="Tsukushi A Round Gothic" pointSize="35"/>
                                 <state key="normal" title="TodoListへ">
                                     <color key="titleColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,24 +48,45 @@
                                     <segue destination="Pm0-vN-eML" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fkP-Bl-Gu8"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oja-DL-daY">
-                                <rect key="frame" x="60" y="288" width="89" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日割る！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-2Q-KMZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日割る！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-2Q-KMZ">
                                 <rect key="frame" x="147" y="283" width="237" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="d07-K5-Lwp"/>
+                                    <constraint firstAttribute="height" constant="99" id="snb-oF-KL7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TsukuARdGothic-Bold" family="Tsukushi A Round Gothic" pointSize="55"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oja-DL-daY">
+                                <rect key="frame" x="70" y="293" width="79" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="dnD-2g-777"/>
+                                    <constraint firstAttribute="width" constant="79" id="z5L-rR-9z0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jge-1e-WtI"/>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oja-DL-daY" firstAttribute="top" secondItem="jge-1e-WtI" secondAttribute="top" constant="249" id="46W-wb-I9k"/>
+                            <constraint firstItem="2mB-2Q-KMZ" firstAttribute="top" secondItem="jge-1e-WtI" secondAttribute="top" constant="239" id="4aq-fI-4Cs"/>
+                            <constraint firstItem="jge-1e-WtI" firstAttribute="trailing" secondItem="0is-7i-8ih" secondAttribute="trailing" constant="88" id="AmR-Pt-R81"/>
+                            <constraint firstItem="NCJ-9Z-xEs" firstAttribute="leading" secondItem="jge-1e-WtI" secondAttribute="leading" constant="89" id="JoJ-8M-goW"/>
+                            <constraint firstItem="jge-1e-WtI" firstAttribute="trailing" secondItem="Oja-DL-daY" secondAttribute="trailing" constant="265" id="M4H-f8-tyE"/>
+                            <constraint firstItem="jge-1e-WtI" firstAttribute="trailing" secondItem="NCJ-9Z-xEs" secondAttribute="trailing" constant="88" id="PTK-L7-XLm"/>
+                            <constraint firstItem="jge-1e-WtI" firstAttribute="bottom" secondItem="0is-7i-8ih" secondAttribute="bottom" constant="48" id="TtA-u0-iRJ"/>
+                            <constraint firstItem="Oja-DL-daY" firstAttribute="leading" secondItem="jge-1e-WtI" secondAttribute="leading" constant="70" id="dXP-k7-OBG"/>
+                            <constraint firstItem="0is-7i-8ih" firstAttribute="top" secondItem="NCJ-9Z-xEs" secondAttribute="bottom" constant="50" id="fh8-As-XnD"/>
+                            <constraint firstItem="jge-1e-WtI" firstAttribute="trailing" secondItem="2mB-2Q-KMZ" secondAttribute="trailing" constant="30" id="lza-p5-FGL"/>
+                            <constraint firstItem="0is-7i-8ih" firstAttribute="leading" secondItem="jge-1e-WtI" secondAttribute="leading" constant="89" id="nJb-3u-IMv"/>
+                            <constraint firstItem="2mB-2Q-KMZ" firstAttribute="leading" secondItem="jge-1e-WtI" secondAttribute="leading" constant="147" id="tcS-8w-s8n"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="addTaskButton" destination="NCJ-9Z-xEs" id="7NZ-TH-kFb"/>
                         <outlet property="gotoListButton" destination="0is-7i-8ih" id="GYQ-c4-fte"/>
+                        <outlet property="iconImage" destination="Oja-DL-daY" id="KiP-3d-uBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aG9-iX-pKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -75,54 +102,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="#41B593.png" translatesAutoresizingMaskIntoConstraints="NO" id="OGg-O9-a7n">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-B1-OhW">
-                                <rect key="frame" x="48" y="333" width="78" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="26"/>
-                                <color key="textColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qg-nX-cqU">
-                                <rect key="frame" x="35" y="238" width="104" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="26"/>
-                                <color key="textColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-cJ-ZDD">
-                                <rect key="frame" x="48" y="423" width="78" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfM-Va-NEx">
+                                <rect key="frame" x="138" y="42" width="138" height="37"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="終了日">
+                                    <fragment content="タスクの追加">
                                         <attributes>
-                                            <color key="NSColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="26" name="HiraginoSans-W6"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="23" name="TsukuARdGothic-Bold"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yau-Ah-kYp">
-                                <rect key="frame" x="61" y="633" width="52" height="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-Vn-Eiu">
+                                <rect key="frame" x="29" y="43" width="39" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="通知">
-                                        <attributes>
-                                            <color key="NSColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="26" name="HiraginoSans-W6"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vur-hJ-ac4">
-                                <rect key="frame" x="99" y="735" width="237" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZO2-Bg-soQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="1t2-dp-Gxd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-w9-ERV" customClass="PickerKeyboard3" customModule="Hiwari_" customModuleProvider="target">
+                                <rect key="frame" x="312" y="433" width="76" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx5-xQ-U2w">
+                                        <rect key="frame" x="0.0" y="3" width="76" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vur-hJ-ac4">
+                                <rect key="frame" x="89" y="728" width="237" height="75"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="  日割る！">
                                     <attributedString key="attributedTitle">
@@ -139,49 +159,57 @@
                                     <segue destination="UCi-ng-2su" kind="presentation" identifier="CalculateViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="wkD-xc-dIR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHY-kx-jhn">
-                                <rect key="frame" x="186" y="234" width="202" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfM-Va-NEx">
-                                <rect key="frame" x="131" y="62" width="152" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="開始日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-B1-OhW">
+                                <rect key="frame" x="40" y="312" width="78" height="26"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="26"/>
+                                <color key="textColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="タスク名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qg-nX-cqU">
+                                <rect key="frame" x="29" y="220" width="104" height="26"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="26"/>
+                                <color key="textColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-cJ-ZDD">
+                                <rect key="frame" x="40" y="403" width="78" height="26"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="タスクの追加">
+                                    <fragment content="終了日">
                                         <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="23" name="TsukuARdGothic-Bold"/>
+                                            <color key="NSColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="HiraginoSans-W6"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-Px-ZL3">
-                                <rect key="frame" x="186" y="515" width="97" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yau-Ah-kYp">
+                                <rect key="frame" x="53" y="612" width="52" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="通知">
+                                        <attributes>
+                                            <color key="NSColor" red="0.25490196078431371" green="0.70980392156862748" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="HiraginoSans-W6"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHY-kx-jhn">
+                                <rect key="frame" x="178" y="217" width="202" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-Px-ZL3">
+                                <rect key="frame" x="178" y="500" width="97" height="36"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-w9-ERV" customClass="PickerKeyboard3" customModule="Hiwari_" customModuleProvider="target">
-                                <rect key="frame" x="312" y="516" width="76" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx5-xQ-U2w">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3M-tz-AJe" customClass="PickerKeyboard4" customModule="Hiwari_" customModuleProvider="target">
-                                <rect key="frame" x="186" y="618" width="202" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3M-tz-AJe" customClass="PickerKeyboard4" customModule="Hiwari_" customModuleProvider="target">
+                                <rect key="frame" x="178" y="597" width="202" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRp-ZL-Stv">
                                         <rect key="frame" x="8" y="0.0" width="186" height="56"/>
@@ -193,32 +221,18 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-2p-WKb" customClass="DatePickerKeyboard" customModule="Hiwari_" customModuleProvider="target">
-                                <rect key="frame" x="186" y="327" width="208" height="38.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-2p-WKb" customClass="DatePickerKeyboard" customModule="Hiwari_" customModuleProvider="target">
+                                <rect key="frame" x="178" y="306" width="208" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-87-ozr" customClass="DatePickerKeyboard" customModule="Hiwari_" customModuleProvider="target">
-                                <rect key="frame" x="186" y="417" width="208" height="38.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-87-ozr" customClass="DatePickerKeyboard" customModule="Hiwari_" customModuleProvider="target">
+                                <rect key="frame" x="178" y="396" width="208" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-Vn-Eiu">
-                                <rect key="frame" x="25" y="64" width="39" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="戻る">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ZO2-Bg-soQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="1t2-dp-Gxd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nv-wG-74r">
-                                <rect key="frame" x="35" y="513" width="106" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nv-wG-74r">
+                                <rect key="frame" x="29" y="505" width="106" height="26"/>
                                 <attributedString key="attributedText">
                                     <fragment content="ページ数">
                                         <attributes>
@@ -233,6 +247,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xmY-87-ozr" firstAttribute="centerY" secondItem="a2y-cJ-ZDD" secondAttribute="centerY" id="3Sd-48-00B"/>
+                            <constraint firstItem="xmY-87-ozr" firstAttribute="centerX" secondItem="QHY-kx-jhn" secondAttribute="centerX" id="3UC-we-zV7"/>
+                            <constraint firstItem="UFR-B1-OhW" firstAttribute="centerX" secondItem="5qg-nX-cqU" secondAttribute="centerX" id="7Xb-cX-vJ7"/>
+                            <constraint firstItem="kuE-2p-WKb" firstAttribute="centerX" secondItem="QHY-kx-jhn" secondAttribute="centerX" id="83b-ac-zLk"/>
+                            <constraint firstItem="4Y6-Px-ZL3" firstAttribute="centerY" secondItem="4Nv-wG-74r" secondAttribute="centerY" id="GiL-Nm-Rwl"/>
+                            <constraint firstItem="QHY-kx-jhn" firstAttribute="centerY" secondItem="5qg-nX-cqU" secondAttribute="centerY" id="L09-J5-7vw"/>
+                            <constraint firstItem="yau-Ah-kYp" firstAttribute="centerX" secondItem="5qg-nX-cqU" secondAttribute="centerX" id="Qt1-qX-qKx"/>
+                            <constraint firstItem="kuE-2p-WKb" firstAttribute="centerY" secondItem="UFR-B1-OhW" secondAttribute="centerY" id="Xuk-rc-cIj"/>
+                            <constraint firstItem="Tsu-w9-ERV" firstAttribute="centerY" secondItem="4Nv-wG-74r" secondAttribute="centerY" id="Zw0-6n-6HF"/>
+                            <constraint firstItem="a2y-cJ-ZDD" firstAttribute="centerX" secondItem="5qg-nX-cqU" secondAttribute="centerX" id="g9A-ef-TSx"/>
+                            <constraint firstItem="F3M-tz-AJe" firstAttribute="centerY" secondItem="yau-Ah-kYp" secondAttribute="centerY" id="iQB-kL-uEP"/>
+                            <constraint firstItem="4Nv-wG-74r" firstAttribute="centerX" secondItem="5qg-nX-cqU" secondAttribute="centerX" id="m2M-rq-Dwq"/>
+                            <constraint firstItem="ZfM-Va-NEx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdw-va-5Vr"/>
+                            <constraint firstItem="Vur-hJ-ac4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uiE-TA-RjB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="HiwariButton" destination="Vur-hJ-ac4" id="yd7-fp-2Bc"/>
@@ -250,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66.666666666666671" y="75.669642857142847"/>
+            <point key="canvasLocation" x="76.811594202898561" y="75.669642857142847"/>
         </scene>
         <!--Calculate View Controller-->
         <scene sceneID="3mn-hU-SuA">
@@ -276,7 +306,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pc-PF-6Zv">
-                                <rect key="frame" x="37" y="241" width="122" height="58"/>
+                                <rect key="frame" x="37" y="231" width="122" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="期間：">
@@ -354,7 +384,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGx-25-ZES">
-                                <rect key="frame" x="89" y="732" width="237" height="75"/>
+                                <rect key="frame" x="89" y="732" width="236" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.70980392160000005" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="  日割る！">
@@ -381,17 +411,36 @@
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
-                                <items>
-                                    <navigationItem title="日割り！" id="vfY-xM-ZPR">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="RJ0-Ot-kFP">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Rnq-dN-00j"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="#41B593.png" translatesAutoresizingMaskIntoConstraints="NO" id="aVi-PR-66s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfO-J6-oek">
+                                <rect key="frame" x="37" y="45" width="39" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="c7A-wE-x17"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-Cv-S0z">
+                                <rect key="frame" x="161" y="47" width="92" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="日割り！">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="23" name="TsukuARdGothic-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tkv-Ya-Ocw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -409,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZF-Pi-7FP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766.66666666666674" y="75.669642857142847"/>
+            <point key="canvasLocation" x="808.69565217391312" y="75.669642857142847"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="L7y-HJ-dUx">
@@ -467,22 +516,16 @@
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-hW-6yk" customClass="CheckBox" customModule="Hiwari_" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="-1" width="45" height="44"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pma-Bk-Huc" customClass="CheckBox" customModule="Hiwari_" customModuleProvider="target">
+                                            <rect key="frame" x="33" y="28" width="46" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal">
+                                            <state key="normal" title="Button">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
-                                            <connections>
-                                                <action selector="checkView:" destination="F49-dj-Yfy" eventType="touchUpInside" id="1tM-QI-gi3"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="checkBox" destination="c9j-hW-6yk" id="KE6-za-uKf"/>
                                     <outlet property="taskamountLabel" destination="N7a-ms-9Eq" id="RQr-h9-bcY"/>
                                     <outlet property="todoLabel" destination="14r-ho-ZR2" id="hHK-8o-Vhk"/>
                                     <segue destination="ack-jC-49K" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="djw-h6-MQq"/>
@@ -593,8 +636,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fkP-Bl-Gu8"/>
-        <segue reference="Jo2-pZ-NGw"/>
+        <segue reference="3fR-Dc-YpM"/>
+        <segue reference="6r6-zL-u0g"/>
         <segue reference="hiZ-a9-feI"/>
     </inferredMetricsTieBreakers>
     <resources>
