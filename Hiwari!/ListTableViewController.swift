@@ -9,7 +9,18 @@ import UIKit
 
 
 
+
+
 class ListTableViewController: UITableViewController  {
+    
+    var Taskname: String?
+    var start: String?
+    var finish : String?
+    var total: String?
+    var pageUnit: String?
+    var dayTask: String?
+    var notification: String?
+
 
     var wordArray: [Dictionary<String,String>] = []
     let saveData = UserDefaults.standard
@@ -63,16 +74,36 @@ class ListTableViewController: UITableViewController  {
                 wordArray.remove(at: indexPath.row)
                 UserDefaults.standard.set(wordArray, forKey: "WORD" )
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
-            }
+        }
         }
      
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // セルの選択を解除
-            tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+            //　タップされたセルの取得
+            let cell = self.tableView.cellForRow(at:indexPath)
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "Gotodetail" {
+                if tableView.indexPathForSelectedRow != nil {
+                    guard segue.destination is DetailViewController else {
+                                fatalError("Failed to prepare DetailViewController.")
+                            }
+                let next = segue.destination as? DetailViewController
+             next?.task = self.Taskname
+             next?.allpages = self.total
+                next?.startdate = self.start
+                next?.finishdate = self.finish
+                next?.notification = self.notification
+            }
     
         }
-       
+    
+
+
     }
+
+}
+
 
    
 
@@ -132,3 +163,4 @@ class ListTableViewController: UITableViewController  {
     */
 
 
+}

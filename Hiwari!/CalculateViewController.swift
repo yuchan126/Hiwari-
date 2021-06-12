@@ -12,13 +12,14 @@ import UIKit
 class CalculateViewController: UIViewController {
     
     @IBOutlet var taskNameLabel : UILabel!   //タスク名
-    @IBOutlet var startdateLabel: UILabel!
-    @IBOutlet var finishdateLabel: UILabel!
+    @IBOutlet var startdateLabel: UILabel!   //開始日
+    @IBOutlet var finishdateLabel: UILabel!  //終了日
     @IBOutlet var TorikumuButton : UIButton!
-    @IBOutlet var dayTaskLabel : UILabel!
-    @IBOutlet var totalLabel : UILabel!
-    @IBOutlet var pageLabel: UILabel!
+    @IBOutlet var dayTaskLabel : UILabel!   //１日あたりの量
+    @IBOutlet var totalLabel : UILabel!    //総量
+    @IBOutlet var pageLabel: UILabel!    //ページ数と単位
   
+    //第二画面から値渡しするための変数
     var taskName: String?
     var startDate: String?
     var finishDate : String?
@@ -36,6 +37,7 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //表示
         taskNameLabel.text = taskName
         startdateLabel.text = startDate
         finishdateLabel.text = finishDate
@@ -82,6 +84,7 @@ class CalculateViewController: UIViewController {
     }
     @IBAction func TorikumuButton(_sender: Any){
         
+        //Userdefaultsに保存
         let taskDictionary = ["Name1": taskNameLabel.text!, "Name2": dayTaskLabel.text!]
         if saveData.array(forKey: "WORD") != nil{
         wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
@@ -92,7 +95,24 @@ class CalculateViewController: UIViewController {
         saveData.setValue(notification, forKey: "Notification")
         saveData.setValue(finishDate,forKey:"Finishdate")
         saveData.object(forKey: "Checkbox")
+        saveData.setValue(startDate, forKey: "Startdate")
+        saveData.setValue(totalAmount, forKey: "Total")
+        saveData.setValue(dayTask, forKey: "oneday")
+        
         }
+    //calculateviewからListtableviewへの値渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "TodoViewController" {
+               let next = segue.destination as? ListTableViewController
+            next?.Taskname = self.taskNameLabel.text
+            next?.start = self.startdateLabel.text
+            next?.finish = self.finishdateLabel.text
+            next?.total = self.totalLabel.text
+            next?.pageUnit = self.pageLabel.text
+            next?.dayTask = self.dayTaskLabel.text
+            next?.notification = self.notification
+
+           }
   
     
     
@@ -110,3 +130,4 @@ class CalculateViewController: UIViewController {
 
 }
 
+}
