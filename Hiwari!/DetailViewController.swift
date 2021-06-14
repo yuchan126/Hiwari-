@@ -19,10 +19,21 @@ class DetailViewController: UIViewController {
     var finishdate: String?
     var startdate: String?
     var notification: String?
-        
+    
+    var index : Int!//Int?にするとエラーになってしまうので!に変えました！
+    let saveData = UserDefaults.standard
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UserDefaultsからデータを取得
+                let todoArray = saveData.array(forKey: "TODO") as! [Dictionary<String, String>]
+                
+                // Labelにindex番目=タップされたCell番目のデータを表示
+                TaskLabel.text = todoArray[index]["Name1"]
+                allpageLabel.text = todoArray[index]["Detail"]
+        
         TaskLabel.text = task//タスク名
         allpageLabel.text = allpages//総量
         FinishdateLabel.text = finishdate//終了日

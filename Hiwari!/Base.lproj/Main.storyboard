@@ -45,7 +45,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tapHiwariButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xs-RU-cTW"/>
-                                    <segue destination="Pm0-vN-eML" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fkP-Bl-Gu8"/>
+                                    <segue destination="Pm0-vN-eML" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="jyv-Bm-b0V"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日割る！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-2Q-KMZ">
@@ -512,15 +512,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pma-Bk-Huc" customClass="CheckBox" customModule="Hiwari_" customModuleProvider="target">
-                                            <rect key="frame" x="33" y="0.0" width="46" height="45"/>
+                                            <rect key="frame" x="33" y="4" width="46" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="checkView:" destination="F49-dj-Yfy" eventType="touchUpInside" id="1mc-CU-CY4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="checkBox" destination="z67-ui-NR4" id="InI-SD-qhc"/>
                                     <outlet property="taskamountLabel" destination="N7a-ms-9Eq" id="RQr-h9-bcY"/>
                                     <outlet property="todoLabel" destination="14r-ho-ZR2" id="hHK-8o-Vhk"/>
                                     <segue destination="ack-jC-49K" kind="presentation" identifier="Gotodetail" id="NfL-QM-8cZ"/>
@@ -679,7 +683,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3fR-Dc-YpM"/>
+        <segue reference="jyv-Bm-b0V"/>
         <segue reference="6r6-zL-u0g"/>
         <segue reference="hiZ-a9-feI"/>
     </inferredMetricsTieBreakers>

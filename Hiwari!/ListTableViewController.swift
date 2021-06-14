@@ -24,6 +24,8 @@ class ListTableViewController: UITableViewController  {
 
     var wordArray: [Dictionary<String,String>] = []
     let saveData = UserDefaults.standard
+    
+    var index : Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,37 +34,37 @@ class ListTableViewController: UITableViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        //Userdefaultsの設定(データがあるならそれを取得し更新する)
         if saveData.array(forKey: "WORD") != nil{
             wordArray = saveData.array(forKey: "WORD") as! [Dictionary<String,String>]
         }
         tableView.reloadData()
     }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 //表示するcell数
                 return wordArray.count
             }
+    
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let TodoCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath) as! TodoTableViewCell
             
             let nowIndexpathDictionary = wordArray[indexPath.row]
             TodoCell.todoLabel.text = nowIndexpathDictionary["Name1",default: "Name2"]
             TodoCell.taskamountLabel.text = nowIndexpathDictionary["Name2"]
+            TodoCell.CheckBox.index = indexPath.row
             
-            TodoCell.selectionStyle = UITableViewCell.SelectionStyle.none
-            //自分で色を設定したい場合は、タップ時の色を指定したUIViewを代入
-            let selectionView = UIView()
-            //タップすると赤色になる
-            selectionView.backgroundColor = UIColor.white
-            TodoCell.selectedBackgroundView = selectionView
-                return TodoCell
-            
+            if wordArray[indexPath.row]["Checked"] == "YES" {
+                       TodoCell.CheckBox.isChecked = true
+                   } else {
+                       TodoCell.CheckBox.isChecked = false
+                   }
+            return TodoCell
+       
                            }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-            
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
         {
             return true
@@ -79,10 +81,15 @@ class ListTableViewController: UITableViewController  {
      
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-            //　タップされたセルの取得
-            let cell = self.tableView.cellForRow(at:indexPath)
+        index = indexPath.row
+        
+       performSegue(withIdentifier: "Gotodetail", sender: nil)
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           let detailViewController = segue.destination as! DetailViewController
+            detailViewController.index = index!
+            
             if segue.identifier == "Gotodetail" {
                 if tableView.indexPathForSelectedRow != nil {
                     guard segue.destination is DetailViewController else {

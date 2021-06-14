@@ -11,12 +11,9 @@ class TodoTableViewCell: UITableViewCell {
 
     @IBOutlet var todoLabel: UILabel!
     @IBOutlet var taskamountLabel: UILabel!
-    @IBOutlet var checkBox: UIButton!
+    @IBOutlet var CheckBox: CheckBox!
     
-    @IBAction func checkView(_ sender: CheckBox) {
-            print(sender.isChecked)
-        }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

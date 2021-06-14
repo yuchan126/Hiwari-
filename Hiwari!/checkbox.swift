@@ -8,6 +8,9 @@
 import UIKit
 
 class CheckBox: UIButton {
+    
+    var index: Int!
+    let saveData = UserDefaults.standard
 
     // Images
     let checkedImage = UIImage(named: "checked.png")! as UIImage
@@ -31,10 +34,21 @@ class CheckBox: UIButton {
         }
 
     @objc func buttonClicked(sender: UIButton) {
-        
-            if sender == self {
-                isChecked = !isChecked
-            }
+        isChecked = !isChecked
+               
+               // UserDefaultsからデータを取得
+               var todoArray = saveData.array(forKey: "TODO") as! [Dictionary<String, String>]
+               
+               // チェックされているかどうかを反転させる
+               if todoArray[index]["Checked"] == "YES" {
+                   todoArray[index]["Checked"] = "NO"
+               } else {
+                   todoArray[index]["Checked"] = "YES"
+               }
+               
+               // UserDefautlsに上書き
+               saveData.setValue(todoArray, forKey: "TODO")
+   
         }
     }
 
